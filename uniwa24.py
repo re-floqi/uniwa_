@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 import time
 
+# Ensure that the tabulate library is installed
+try:
+    import tabulate
+except ImportError:
+    raise ImportError("The 'tabulate' library is required. Please install it using 'pip install tabulate'.")
+
 # Συνάρτηση για φόρτωση ανακοινώσεων από Google Sheets
 def load_announcements():
     url = "https://docs.google.com/spreadsheets/d/1dqBSWQTSJmpDH_bkCg43jZ9rvR2sLVevxLDycrb9XM8/export?format=csv"
