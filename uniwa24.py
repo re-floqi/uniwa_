@@ -34,7 +34,7 @@ def main():
 
         # Αυτόματη ανανέωση κάθε 10 λεπτά
         time.sleep(600)
-        st.experimental_rerun()
+        st.rerun()
 
     elif choice == "Πρόγραμμα Μαθημάτων":
         # Έλεγχος πρόσβασης
@@ -52,6 +52,6 @@ def main():
         st.write(df.to_markdown(index=False), unsafe_allow_html=True)
         # Αυτόματη ανανέωση κάθε 10 λεπτά
         time.sleep(600)
-        st.experimental_rerun()
+        st.rerun()
 if __name__ == "__main__":
     main()
